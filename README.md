@@ -1,13 +1,5 @@
 # Shader-Cache-Cleaner
 
-How to Use:
-
-Run the EXE.
-
-Confirm Cache Deletion: The script will ask if you want to proceed with deleting all shader caches.
-
-Monitor Progress: The script will delete caches and display the result for each type of cache.
-
 --------------------------------------------------------------------------------------------------------------------------------------------
 
 This script helps clean up the shader caches for your NVIDIA, AMD, and Intel graphics cards. Shader caches store precompiled shaders to improve game performance, but occasionally, they can cause issues and may need to be deleted.
