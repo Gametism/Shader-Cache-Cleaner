@@ -40,4 +40,5 @@ If shader issues persist, the script provides advice on how to reset or disable 
 This script is useful if you are experiencing performance issues or stuttering in games, as clearing shader caches can sometimes resolve such problems.
 
 License
+
 MIT license
