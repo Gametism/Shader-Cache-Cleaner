@@ -37,8 +37,6 @@ If not, it automatically requests elevation before continuing.
 
 Instead of deleting predefined paths blindly, Version 0.2 first scans your system and only lists shader caches that are actually found.
 
-This improves transparency and avoids unnecessary actions.
-
 ---
 
 ### Supported Cache Locations
@@ -92,8 +90,6 @@ Example:
 [Folder] NVIDIA DXCache
 [Folder] DirectX D3DSCache
 [File] Bloodlines2_PCD3D_SM6.upipelinecache
-
-You stay in full control before confirming deletion.
 
 ---
 
@@ -170,4 +166,3 @@ Shader Cache Cleaner v0.2 is useful if you experience:
 ## License
 
 MIT License
-
