@@ -1,58 +1,173 @@
-# Shader-Cache-Cleaner
+## How to Use
 
-The Shader Cache Cleaner script is a Windows batch file designed to help users delete shader cache files associated with various graphics drivers, including NVIDIA, AMD, and Intel. The script checks for administrative privileges before proceeding and allows users to add custom shader cache paths for cleanup. It logs its operations to a log file for reference. Shader caches store precompiled shaders to improve game performance, but occasionally, they can cause issues and may need to be deleted.
+1. Download and extract the files.
+2. Run the BAT file.
+3. The tool will automatically scan your system for shader caches.
+4. Review the found cache folders/files shown on screen.
+5. Confirm deletion if you want to proceed.
 
+---
 
-Key Features:
+## Shader Cache Cleaner v0.2
 
+Shader Cache Cleaner is a Windows batch utility designed to locate and remove shader cache files created by graphics drivers, DirectX, and supported games.
 
-Administrative Privileges:
+Shader caches store precompiled shaders to reduce loading times and improve performance. However, corrupted or outdated cache files can sometimes cause:
 
-The script checks if it is running with administrative rights and prompts for elevation if not.
+* stuttering
+* hitching
+* long shader compilation times
+* graphical issues
+* poor game performance after updates
 
+Clearing shader caches can often resolve these problems.
 
-Cache Location Definitions:
+---
 
-It defines specific directories for NVIDIA, AMD, and Intel shader caches that are commonly found in the user's AppData directory.
+## Key Features
 
+### Administrative Privileges
 
-User Interaction:
+The script checks if it is running with administrator rights.
+If not, it automatically requests elevation before continuing.
 
-Users are welcomed with a message and given the option to proceed with cleaning the caches or to cancel the operation.
-The script confirms with the user before proceeding with the deletion of cache files.
+---
 
+### Automatic Cache Detection
 
-Custom Path Option:
+Instead of deleting predefined paths blindly, Version 0.2 first scans your system and only lists shader caches that are actually found.
 
-Users can specify a custom path for shader cache directories they wish to clean. This is useful for game-specific cache files not covered by the predefined paths.
+This improves transparency and avoids unnecessary actions.
 
+---
 
+### Supported Cache Locations
 
-Cache Deletion:
+The tool checks common Windows shader cache locations, including:
 
-The script attempts to delete the contents of the defined shader cache directories. If successful, it informs the user; if not, it provides feedback about any issues encountered (e.g., files in use).
+#### NVIDIA
 
-Logging:
+* DXCache
+* GLCache
+* NV_Cache
 
-All actions taken by the script, including deletions and errors, are logged into a log file located in the user's AppData directory. This allows users to review what actions were performed and to troubleshoot any issues.
+#### AMD
 
-User Feedback:
+* DxCache
+* GLCache
 
-Throughout the process, the script provides feedback in the console and records important messages in the log file, making it user-friendly.
+#### Intel
 
+* ShaderCache
+* Low ShaderCache
 
-Error Handling:
+#### Microsoft / DirectX
 
-The script checks for the existence of directories before attempting to delete them and informs the user if any specified paths are not found.
+* D3DSCache
 
+---
 
-Guidance for NVIDIA/AMD Users:
+### Unreal Engine Game Cache Detection
 
-If shader issues persist, the script provides advice on how to reset or disable the shader cache in the NVIDIA or AMD control panels.
+Version 0.2 also scans `%LOCALAPPDATA%` for Unreal Engine style shader cache files commonly used by games.
 
+Examples:
 
+* `*_ShaderCacheCheck.bin`
+* `*.upipelinecache`
 
-This script is useful if you are experiencing performance issues or stuttering in games, as clearing shader caches can sometimes resolve such problems.
+Such as:
 
+* `MGSDeltaFix_ShaderCacheCheck.bin`
+* `Bloodlines2_PCD3D_SM6.upipelinecache`
 
-MIT license
+---
+
+### Found Cache Preview Before Deletion
+
+Before deleting anything, the script shows every detected cache item.
+
+Example:
+
+[Folder] NVIDIA DXCache
+[Folder] DirectX D3DSCache
+[File] Bloodlines2_PCD3D_SM6.upipelinecache
+
+You stay in full control before confirming deletion.
+
+---
+
+### Safe Confirmation Prompt
+
+No deletion happens automatically.
+
+The script asks for confirmation before removing any detected cache folders or files.
+
+---
+
+### Logging
+
+All actions are logged to:
+
+%LOCALAPPDATA%\ShaderCacheCleaner.log
+
+The log includes:
+
+* scan results
+* deleted items
+* failed deletions
+* timestamps
+* cancellation events
+
+---
+
+### User Feedback
+
+The tool provides clear live feedback in the console during:
+
+* scanning
+* found results
+* deletion progress
+* final summary
+
+---
+
+### Error Handling
+
+The script checks whether files/folders exist before deleting them.
+
+If something cannot be removed (for example currently in use), it reports the failure instead of silently skipping it.
+
+---
+
+### Helpful Guidance After Cleanup
+
+If shader problems continue, the tool recommends restarting Windows and resetting shader cache manually in your GPU control panel.
+
+#### NVIDIA
+
+Manage 3D Settings → Shader Cache Size
+
+#### AMD
+
+Graphics → Advanced → Reset Shader Cache
+
+---
+
+## Why Use It?
+
+Shader Cache Cleaner v0.2 is useful if you experience:
+
+* stutter after driver updates
+* Unreal Engine games recompiling endlessly
+* corrupted shader caches
+* poor frametimes
+* random hitching
+* post-update performance drops
+
+---
+
+## License
+
+MIT License
+
