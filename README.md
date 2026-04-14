@@ -8,7 +8,7 @@
 
 ---
 
-## Shader Cache Cleaner v0.2
+## Shader Cache Cleaner
 
 Shader Cache Cleaner is a Windows batch utility designed to locate and remove shader cache files created by graphics drivers, DirectX, and supported games.
 
@@ -152,7 +152,7 @@ Graphics → Advanced → Reset Shader Cache
 
 ## Why Use It?
 
-Shader Cache Cleaner v0.2 is useful if you experience:
+Shader Cache Cleaner is useful if you experience:
 
 * stutter after driver updates
 * Unreal Engine games recompiling endlessly
