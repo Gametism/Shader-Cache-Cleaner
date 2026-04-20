@@ -8,9 +8,9 @@
 
 ---
 
-## Shader Cache Cleaner
+# Shader Cache Cleaner
 
-Shader Cache Cleaner is a Windows batch utility designed to locate and remove shader cache files created by graphics drivers, DirectX, and supported games.
+Shader Cache Cleaner is a lightweight Windows batch utility designed to locate and remove shader cache files created by GPU drivers, DirectX, and supported games.
 
 Shader caches store precompiled shaders to reduce loading times and improve performance. However, corrupted or outdated cache files can sometimes cause:
 
@@ -18,70 +18,78 @@ Shader caches store precompiled shaders to reduce loading times and improve perf
 * hitching
 * long shader compilation times
 * graphical issues
-* poor game performance after updates
+* poor performance after updates
 
-Clearing shader caches can often resolve these problems.
+Clearing shader caches can often help resolve these problems.
 
 ---
 
-## Key Features
+# Key Features
 
-### Administrative Privileges
+## Administrative Privileges
 
-The script checks if it is running with administrator rights.
+The script checks whether it is running with administrator rights.
 If not, it automatically requests elevation before continuing.
 
 ---
 
-### Automatic Cache Detection
+## Automatic Cache Detection
 
-Instead of deleting predefined paths blindly, Version 0.2 first scans your system and only lists shader caches that are actually found.
+Instead of deleting predefined paths blindly, the tool first scans your system and only lists shader caches that are actually found.
 
 ---
 
-### Supported Cache Locations
+## Supported Cache Locations
 
 The tool checks common Windows shader cache locations, including:
 
-#### NVIDIA
+## NVIDIA
 
 * DXCache
 * GLCache
 * NV_Cache
 
-#### AMD
+## AMD
 
 * DxCache
 * GLCache
 
-#### Intel
+## Intel
 
 * ShaderCache
 * Low ShaderCache
 
-#### Microsoft / DirectX
+## Microsoft / DirectX
 
 * D3DSCache
 
 ---
 
-### Unreal Engine Game Cache Detection
+## Game Shader Cache Detection
 
-Version 0.2 also scans `%LOCALAPPDATA%` for Unreal Engine style shader cache files commonly used by games.
+The tool also scans common game-specific cache locations such as:
+
+%USERPROFILE%\Documents\My Games
+%LOCALAPPDATA%
+
+This includes Unreal Engine style shader cache files commonly used by modern PC games.
 
 Examples:
 
-* `*_ShaderCacheCheck.bin`
-* `*.upipelinecache`
+* *_ShaderCacheCheck.bin
+* *.upipelinecache
+* *.ushaderprecache
+* D3DDriverByteCodeBlob_*.ushaderprecache
 
 Such as:
 
-* `MGSDeltaFix_ShaderCacheCheck.bin`
-* `Bloodlines2_PCD3D_SM6.upipelinecache`
+* MGSDeltaFix_ShaderCacheCheck.bin
+* Bloodlines2_PCD3D_SM6.upipelinecache
+* D3DDriverByteCodeBlob_V4318_D10071_S309009669_R161.ushaderprecache
 
 ---
 
-### Found Cache Preview Before Deletion
+## Found Cache Preview Before Deletion
 
 Before deleting anything, the script shows every detected cache item.
 
@@ -93,7 +101,7 @@ Example:
 
 ---
 
-### Safe Confirmation Prompt
+## Safe Confirmation Prompt
 
 No deletion happens automatically.
 
@@ -101,7 +109,7 @@ The script asks for confirmation before removing any detected cache folders or f
 
 ---
 
-### Logging
+## Logging
 
 All actions are logged to:
 
@@ -117,7 +125,18 @@ The log includes:
 
 ---
 
-### User Feedback
+## Colored Console UI
+
+The latest version includes a cleaner colored console interface for easier readability:
+
+* Green = success
+* Yellow = warnings / prompts
+* Cyan = scan results
+* Red = failed deletions
+
+---
+
+## User Feedback
 
 The tool provides clear live feedback in the console during:
 
@@ -128,7 +147,7 @@ The tool provides clear live feedback in the console during:
 
 ---
 
-### Error Handling
+## Error Handling
 
 The script checks whether files/folders exist before deleting them.
 
@@ -136,21 +155,21 @@ If something cannot be removed (for example currently in use), it reports the fa
 
 ---
 
-### Helpful Guidance After Cleanup
+## Helpful Guidance After Cleanup
 
 If shader problems continue, the tool recommends restarting Windows and resetting shader cache manually in your GPU control panel.
 
-#### NVIDIA
+## NVIDIA
 
 Manage 3D Settings → Shader Cache Size
 
-#### AMD
+## AMD
 
 Graphics → Advanced → Reset Shader Cache
 
 ---
 
-## Why Use It?
+# Why Use It?
 
 Shader Cache Cleaner is useful if you experience:
 
@@ -163,6 +182,6 @@ Shader Cache Cleaner is useful if you experience:
 
 ---
 
-## License
+# License
 
 MIT License
