@@ -2,7 +2,7 @@
 setlocal EnableExtensions EnableDelayedExpansion
 
 :: Shader Cache Cleaner by Gametism
-:: Version 0.3
+:: Version 0.4
 
 title Shader Cache Cleaner by Gametism
 color 0A
@@ -35,7 +35,7 @@ type nul > "%FoundList%"
 
 echo ...................................................
 echo         Shader Cache Cleaner by Gametism
-echo                  Version 0.3
+echo                  Version 0.4
 echo ...................................................
 echo.
 
@@ -63,6 +63,16 @@ call :scan_pattern "%LOCALAPPDATA%" "*.ushaderprecache"
 call :scan_pattern "%MyGamesRoot%" "*.upipelinecache"
 call :scan_pattern "%MyGamesRoot%" "*.ushaderprecache"
 call :scan_pattern "%MyGamesRoot%" "D3DDriverByteCodeBlob_*.ushaderprecache"
+
+call :scan_pattern "%LOCALAPPDATA%\Starfield" "Pipeline.cache" "Starfield Pipeline Cache"
+
+call :scan_pattern "%LOCALAPPDATA%\id Software\Rage 2" "Pipelines.cache" "RAGE 2 Pipeline Cache"
+
+call :scan_pattern "%LOCALAPPDATA%\TangoGameworks\The Evil Within 2" "FileCache*.bin" "The Evil Within 2 File Cache"
+
+call :scan_pattern "%LOCALAPPDATA%\SquareEnix\FINAL FANTASY XVI" "*.psol" "FINAL FANTASY XVI PSO Cache"
+
+call :scan_pattern "%LOCALAPPDATA%\IO Interactive\HITMAN3" "Pipeline*.bin" "HITMAN 3 Pipeline Cache"
 
 echo.
 
