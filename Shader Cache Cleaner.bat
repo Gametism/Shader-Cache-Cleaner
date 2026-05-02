@@ -3,7 +3,7 @@
 setlocal EnableExtensions EnableDelayedExpansion
 
 :: Shader Cache Cleaner by Gametism
-:: Version 0.4
+:: Version 0.5
 
 title Shader Cache Cleaner by Gametism
 color 0A
@@ -13,7 +13,7 @@ set "FoundList=%TEMP%\ShaderCacheCleaner_Found_%RANDOM%_%RANDOM%.txt"
 
 > "%LogFile%" (
     echo Shader Cache Cleaner Log
-    echo Version 0.4
+    echo Version 0.5
     echo -----------------------------------------------
     echo Started at: %date% %time%
     echo.
@@ -45,7 +45,7 @@ type nul > "%FoundList%"
 
 echo ...................................................
 echo         Shader Cache Cleaner by Gametism
-echo                  Version 0.4
+echo                  Version 0.5
 echo ...................................................
 echo.
 
