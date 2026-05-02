@@ -60,27 +60,34 @@ echo.
 call :scan_dir "%NVIDIA_cache1%" "NVIDIA DXCache"
 call :scan_dir "%NVIDIA_cache2%" "NVIDIA GLCache"
 call :scan_dir "%NVIDIA_cache3%" "NVIDIA NV_Cache"
-
 call :scan_dir "%AMD_cache1%" "AMD DXCache"
 call :scan_dir "%AMD_cache2%" "AMD GLCache"
-
 call :scan_dir "%Intel_cache1%" "Intel ShaderCache"
 call :scan_dir "%Intel_cache2%" "Intel Low ShaderCache"
-
 call :scan_dir "%DirectX_cache%" "DirectX D3DSCache"
-
 call :scan_pattern "%LOCALAPPDATA%" "*.upipelinecache" "Unreal Pipeline Cache"
 call :scan_pattern "%LOCALAPPDATA%" "*.ushaderprecache" "Unreal Shader Precache"
-
 call :scan_pattern "%MyGamesRoot%" "*.upipelinecache" "My Games Unreal Pipeline Cache"
 call :scan_pattern "%MyGamesRoot%" "*.ushaderprecache" "My Games Unreal Shader Precache"
 call :scan_pattern "%MyGamesRoot%" "D3DDriverByteCodeBlob_*.ushaderprecache" "My Games D3D Driver ByteCode Blob"
-
 call :scan_pattern "%LOCALAPPDATA%\Starfield" "Pipeline.cache" "Starfield Pipeline Cache"
 call :scan_pattern "%LOCALAPPDATA%\id Software\Rage 2" "Pipelines.cache" "RAGE 2 Pipeline Cache"
 call :scan_pattern "%LOCALAPPDATA%\TangoGameworks\The Evil Within 2" "FileCache*.bin" "The Evil Within 2 File Cache"
 call :scan_pattern "%LOCALAPPDATA%\SquareEnix\FINAL FANTASY XVI" "*.psol" "FINAL FANTASY XVI PSO Cache"
 call :scan_pattern "%LOCALAPPDATA%\IO Interactive\HITMAN3" "Pipeline*.bin" "HITMAN 3 Pipeline Cache"
+call :scan_pattern "%USERPROFILE%\Documents\Assassin's Creed Shadows\cache\DX12" "pipelinecache*.bin" "AC Shadows DX12 Pipeline Cache"
+call :scan_dir "%USERPROFILE%\Documents\Assassin's Creed Mirage\cache" "AC Mirage Cache"
+call :scan_dir "%USERPROFILE%\Documents\Assassin's Creed Odyssey\cache" "AC Odyssey Cache"
+call :scan_dir "%USERPROFILE%\Documents\Assassin's Creed Valhalla\cache" "AC Valhalla Cache"
+call :scan_dir "%USERPROFILE%\Documents\Immortals Fenyx Rising\cache" "Immortals Fenyx Rising Cache"
+call :scan_pattern "%USERPROFILE%\Documents\My Games\Ghost Recon Breakpoint\PersistentStorage" "*.cache" "Ghost Recon Breakpoint Cache"
+call :scan_pattern "%USERPROFILE%\Documents\My Games\Tom Clancy's The Division\ShaderCache\dx11" "*.mcache" "The Division DX11 Shader Cache"
+call :scan_pattern "%USERPROFILE%\Documents\My Games\Tom Clancy's The Division\ShaderCache\dx12" "*.mcache" "The Division DX12 Shader Cache"
+call :scan_pattern "%USERPROFILE%\Documents\My Games\Tom Clancy's The Division 2\ShaderCache\dx11" "*.mcache" "The Division 2 DX11 Shader Cache"
+call :scan_pattern "%USERPROFILE%\Documents\My Games\Tom Clancy's The Division 2\ShaderCache\dx12" "*.mcache" "The Division 2 DX12 Shader Cache"
+call :scan_dir "%USERPROFILE%\Documents\Dead Space (2023)\cache" "Dead Space (2023) Cache"
+call :scan_pattern "%USERPROFILE%\Documents\dying light 2\out" "dx12psocache.bin" "Dying Light 2 DX12 PSO Cache"
+call :scan_dir "%USERPROFILE%\Documents\Avalanche Studios\GenerationZero\Cache" "Generation Zero Cache"
 
 echo.
 
