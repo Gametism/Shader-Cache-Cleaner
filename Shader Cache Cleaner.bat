@@ -1,4 +1,3 @@
-```bat
 @echo off
 setlocal EnableExtensions EnableDelayedExpansion
 
@@ -88,6 +87,7 @@ call :scan_pattern "%USERPROFILE%\Documents\My Games\Tom Clancy's The Division 2
 call :scan_dir "%USERPROFILE%\Documents\Dead Space (2023)\cache" "Dead Space (2023) Cache"
 call :scan_pattern "%USERPROFILE%\Documents\dying light 2\out" "dx12psocache.bin" "Dying Light 2 DX12 PSO Cache"
 call :scan_dir "%USERPROFILE%\Documents\Avalanche Studios\GenerationZero\Cache" "Generation Zero Cache"
+call :scan_dir "%USERPROFILE%\Documents\Assassin's Creed Black Flag Resynced\cache\DX12" "pipelinecache*.bin" "AC Black Flag Resynced DX12 Pipeline Cach"
 
 echo.
 
